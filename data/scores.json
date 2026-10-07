@@ -1,0 +1,40 @@
+{
+  "entries": [
+    {
+      "date": "2026-10-01",
+      "person": "Person A",
+      "modelIteration": "A-baseline-01",
+      "score": "0.812",
+      "datasetLink": "https://example.com/person-b-dataset-v1",
+      "networkLink": "https://example.com/person-a-model-baseline",
+      "comments": "Baseline neural network. Tested on Person B dataset v1."
+    },
+    {
+      "date": "2026-10-02",
+      "person": "Person B",
+      "modelIteration": "B-baseline-01",
+      "score": "0.798",
+      "datasetLink": "https://example.com/person-a-dataset-v1",
+      "networkLink": "https://example.com/person-b-model-baseline",
+      "comments": "Baseline model with initial preprocessing. Tested on Person A dataset v1."
+    },
+    {
+      "date": "2026-10-05",
+      "person": "Person A",
+      "modelIteration": "A-hidden-layer-02",
+      "score": "0.846",
+      "datasetLink": "https://example.com/person-b-dataset-v2",
+      "networkLink": "https://example.com/person-a-model-v2",
+      "comments": "Added one hidden layer and changed learning rate."
+    },
+    {
+      "date": "2026-10-06",
+      "person": "Person B",
+      "modelIteration": "B-dropout-02",
+      "score": "0.831",
+      "datasetLink": "https://example.com/person-a-dataset-v2",
+      "networkLink": "https://example.com/person-b-model-v2",
+      "comments": "Added dropout and cleaned duplicate rows in training data."
+    }
+  ]
+}

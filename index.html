@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Neural Network Evaluation Log</title>
+    <meta name="description" content="Research log for neural network model evaluation.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page" id="home-screen">
+      <h1>Neural Network Evaluation Log</h1>
+
+      <section>
+        <h2>Project Description</h2>
+        <p>
+          Person A and Person B are building separate neural network models. Each
+          model is tested on the other person's dataset, and the results are
+          recorded here with links to the dataset, model, and notes about changes.
+        </p>
+      </section>
+
+      <section>
+        <h2>Professor In Charge</h2>
+        <p>To be added.</p>
+      </section>
+
+      <section>
+        <h2>Research Paper Being Followed</h2>
+        <p>To be added.</p>
+      </section>
+
+      <section id="scores">
+        <h2>Evaluation Table</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Person</th>
+                <th>Model iteration</th>
+                <th>Score</th>
+                <th>Dataset</th>
+                <th>NN GitHub repo</th>
+                <th>Comments / changes</th>
+              </tr>
+            </thead>
+            <tbody id="score-rows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h2>Lodge Data</h2>
+        <p>Enter the project code to lodge a new evaluation entry.</p>
+        <form id="code-form" class="code-form">
+          <label>
+            Code
+            <input type="password" id="access-code" autocomplete="off" required>
+          </label>
+          <button type="submit">Continue</button>
+        </form>
+        <p class="message" id="code-message" role="status"></p>
+      </section>
+    </main>
+
+    <main class="page" id="lodge-screen" hidden>
+      <button type="button" id="back-home">Back to log</button>
+      <h1>Lodge Data</h1>
+
+      <form id="entry-form" class="entry-form">
+        <label>
+          Date
+          <input type="date" name="date" required>
+        </label>
+
+        <label>
+          Person
+          <select name="person" required>
+            <option value="">Select</option>
+            <option>Person A</option>
+            <option>Person B</option>
+          </select>
+        </label>
+
+        <label>
+          Model iteration
+          <input type="text" name="modelIteration" placeholder="A-v2" required>
+        </label>
+
+        <label>
+          Score
+          <input type="text" name="score" placeholder="0.842" required>
+        </label>
+
+        <label>
+          Dataset link
+          <input type="url" name="datasetLink" placeholder="https://...">
+        </label>
+
+        <label>
+          NN GitHub repo
+          <input type="url" name="networkLink" placeholder="https://...">
+        </label>
+
+        <label>
+          Comments / changes
+          <textarea name="comments" rows="4"></textarea>
+        </label>
+
+        <div class="actions">
+          <button type="submit">Add entry</button>
+          <button type="button" id="copy-json">Copy JSON</button>
+        </div>
+
+        <p class="message" id="entry-message" role="status"></p>
+      </form>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
